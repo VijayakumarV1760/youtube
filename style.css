@@ -137,3 +137,100 @@ ul li:hover{
 .sidebar-line{
     border-bottom: 0.3px solid black;
 }
+.main-content{    
+    width: 85%;
+}
+.trendingKeys{
+    height: 8vh;
+    background-color: azure;
+    display: flex; 
+    gap: 8px;     
+    position: relative;
+    align-content: center;
+    /* justify-content: start; */    
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    white-space: nowrap;
+}
+
+.trendingKeys::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.trendingKeys a{
+    background-color:  #F2F2F2;
+    padding: 12px;
+    color: black;
+    border-radius: 14px;
+    position: relative;
+    left: 12px;
+    right: 12px;
+}
+.trendingKeys .all{
+        color: rgb(255, 255, 255);
+    background-color: rgb(22, 22, 22);   
+}
+.TrendingContent{
+    width: 100%;
+}
+.card{
+    height: 41vh;
+    display: flex;
+    padding: 23px;
+}
+.card-1{
+    width: 33.3%;
+    height: 30vh;
+}
+.card-img{
+    width: 100%;
+}
+.card-header-img{
+    height: 200px;
+    width: 350px;
+    position: relative;
+
+}
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.card-time{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #ffffff;
+    background-color: #051D28;
+    padding: 1px;
+    border-radius: 6px;
+}
+.card-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+}
+.card-channel-content{
+    height: 40px;
+    width: 248px;
+}
+.card-channel-heading{
+    height: 50px;
+    width: 258px;
+}
+
+.card-channel-options-img{
+    width: 20px;
+    height: 20px;
+}
+.card-channel-name{
+   color: #919191;
+    display: flex;
+    opacity: 70%;
+}
+.card-video-details{
+    color: #919191;
+    display: flex;
+}
