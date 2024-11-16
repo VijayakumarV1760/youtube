@@ -1,153 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Youtube</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- <meta http-equiv="refresh" content="5" /> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  </head>
-  <body>
-    <div class="header">
-      <div class="left">
-        <div class="menu-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-list menu-icon-file"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-            />
-          </svg>
-        </div>
-        <div class="youTube-logo">
-          <img src="./assets/logo/YouTube-Logo.wine.svg" alt="" class="logo-image" />
-        </div>
-      </div>
-      <div class="center">
-        <div class="search">
-          <div class="text-box">
-            <input type="text" class="search-input"/>
-          </div>
-          <div class="search-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-search"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-              />
-            </svg>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <div class="mic">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-mic-fill"
-            viewBox="0 0 16 16"
-          >
-            <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
-            <path
-              d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"
-            />
-          </svg>
-        </div>
+  <title>Youtube</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <meta http-equiv="refresh" content="5" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="left">
+      <div class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-list menu-icon-file" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
       </div>
-      <div class="right">
-        <div class="upload-video">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-camera-reels"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0"
-            />
-            <path
-              d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1"
-            />
-            <path
-              d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
-            />
-          </svg>
-        </div>
-        <div class="notification">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-bell"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
-            />
-          </svg>
-        </div>
-        <div class="profile">
-          <img
-            src="https://yt3.ggpht.com/KyosinOIh7C-uR-EWO1pesIQWN1Hga0fs332OFjSA01rczlCcTLkXeK5cnvXsCSTVSBUzJ57=s88-c-k-c0x00ffffff-no-rj"
-            alt=""
-            class="profile-image"
-          />
-        </div>
+      <div class="youTube-logo">
+        <img src="./assets/logo/YouTube-Logo.wine.svg" alt="" class="logo-image" />
       </div>
     </div>
-    <div class="content">
-      <div class="sidebar">
-            <div class="main-sidebar">
-                <div class="list1">
-                    <ul>
-                        <li><p><i class="bi bi-house-door-fill"></i></p> <p>Home</p></li>
-                        <li><p><i class="bi bi-camera-video-fill"></i> </p><p>Shorts</p></p></li>
-                        <li><p><i class="bi bi-youtube"></i><p>Subscription</p></p></li>
-                    </ul>
-                </div>
-                <div class="sidebar-line"></div>
-                <div class="list1">
-                    <ul>
-                        <li><p><i class="bi bi-house-door-fill"></i></p> <p>Home</p></li>
-                        <li><p><i class="bi bi-camera-video-fill"></i> </p><p>Shorts</p></p></li>
-                        <li><p><i class="bi bi-youtube"></i><p>Subscription</p></p></li>
-                    </ul>
-                </div>
-                <div class="sidebar-line"></div>
-                <div class="list1">
-                    <ul>
-                        <li><p><i class="   bi bi-house-door-fill"></i></p> <p>Home</p></li>
-                        <li><p><i class="bi bi-camera-video-fill"></i> </p><p>Shorts</p></p></li>
-                        <li><p><i class="bi bi-youtube"></i><p>Subscription</p></p></li>
-                    </ul>
-                </div>
-                <div class="sidebar-line"></div>
-                <div class="list1"></div>
-                <div class="list1"></div>
-                <div class="list1"></div>
-                <div class="list1"></div>
+    <div class="center">
+      <div class="search">
+        <div class="text-box">
+          <input type="text" class="search-input" />
+        </div>
+        <div class="search-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="mic">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill"
+          viewBox="0 0 16 16">
+          <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+          <path
+            d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+        </svg>
+      </div>
+    </div>
+    <div class="right">
+      <div class="upload-video">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-reels"
+          viewBox="0 0 16 16">
+          <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0" />
+          <path
+            d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1" />
+          <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+        </svg>
+      </div>
+      <div class="notification">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+        </svg>
+      </div>
+      <div class="profile">
+        <img
+          src="https://yt3.ggpht.com/KyosinOIh7C-uR-EWO1pesIQWN1Hga0fs332OFjSA01rczlCcTLkXeK5cnvXsCSTVSBUzJ57=s88-c-k-c0x00ffffff-no-rj"
+          alt="" class="profile-image" />
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <div class="main-sidebar">
+        <div class="list1">
+          <ul>
+            <li>
+              <p><i class="bi bi-house-door-fill"></i></p>
+              <p>Home</p>
+            </li>
+            <li>
+              <p><i class="bi bi-camera-video-fill"></i> </p>
+              <p>Shorts</p>
+              </p>
+            </li>
+            <li>
+              <p><i class="bi bi-youtube"></i>
+              <p>Subscription</p>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-line"></div>
+        <div class="list1">
+          <ul>
+            <li>                          
+              <p>You</p>
+              <p><i class="bi bi-house-door-fill"></i></p>
+            </li>
+            <li>
+              <p><i class="bi bi-camera-video-fill"></i> </p>
+              <p>History</p>
+              </p>
+            </li>
+            <li>
+              <p><i class="bi bi-youtube"></i>
+              <p>Playlists</p>
+              </p>
+            </li>
+            <li>
+              <p><i class="bi bi-youtube"></i>
+              <p>Your Videos</p>
+              </p>
+            </li>
+            <li>
+              <p><i class="bi bi-youtube"></i>
+              <p>Watch Later</p>
+              </p>
+            </li>
+            <li>
+              <p><i class="bi bi-youtube"></i>
+              <p>Liked Videos</p>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-line"></div>
+        <div class="list1">
+          <ul>
+            <li>
+              <!-- <p><i class="   bi bi-house-door-fill"></i></p> -->
+              <p>Explore</p>
+            </li>
+            <li>
+              <p><i class="   bi bi-house-door-fill"></i></p>
+              <p>Trending</p>
+            </li>
+            <li>
+              <p><i class="bi bi-camera-video-fill"></i> </p>
+              <p>Shopping</p>
+              </p>
+            </li>
+            <li>
+              <p><i class="bi bi-youtube"></i>
+              <p>Music</p>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-line"></div>
+        <div class="list1">
+          <ul>
+            <li>
+              <!-- <p><i class="   bi bi-house-door-fill"></i></p> -->
+              <p>Explore</p>
+            </li>
+            <li>
+              <p><i class="   bi bi-house-door-fill"></i></p>
+              <p>Trending</p>
+            </li>
+            <li>
+              <p><i class="bi bi-camera-video-fill"></i> </p>
+              <p>Shopping</p>
+              </p>
+            </li>
+            <li>
+              <p><i class="bi bi-youtube"></i>
+              <p>Music</p>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="list1"></div>
+        <div class="list1"></div>
+        <div class="list1"></div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="trendingKeys">
+        <a class="all">All</a>
+        <a class="Music">Music</a>
+        <a class="Music">Tamil</a>
+        <a class="Music">Drama</a>
+        <a class="Music">Mixes</a>
+        <a class="Music">Web</a>
+        <a class="Music">T-Series</a>
+        <a class="Music">Live</a>
+        <a class="Music">A.R</a>
+        <a class="Music">Satire</a>
+        <a class="Music">Game</a>
+        <a class="Music">Gaming</a>
+        <a class="Music">Indian</a>
+        <a class="Music">Rhythms</a>
+        <a class="Music">Software</a>
+        <a class="Music">Music</a>
+        <a class="Music">Gaming</a>
+        <a class="Music">Indian</a>
+        <a class="Music">Rhythms</a>
+        <a class="Music">Software</a>
+        <a class="Music">Music</a>
+      </div>
+      <div class="TrendingContent">
+        <div class="TrendingContent-section">          
+        <div class="card">
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
             </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" >
+                </div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAaVBMVEUAAAD///+pqakYGBj8/Pz4+PjFxcWcnJzo6OgaGhrb29sWFhbh4eFOTk7v7+9HR0eSkpIPDw+8vLzLy8tqamp9fX2EhITR0dEtLS2MjIyxsbFzc3MICAhhYWEyMjJBQUEiIiJWVlY6OjqIH57VAAAFq0lEQVR4nO2ca5uyKhSGqTxXHio1teP8/x+5deaaXkAWLATS2VfPx5nSO8HFOgFZLVBkbgCRPlBYfaCw+l9D+WmSpL6li9mBCqqY9IqrwMrlbEBFHXmpiyxc0AJU8iCUHskSoIINYbQxH0JjqAMZqZ0bKh8zEZLPC1WKmAgpZ4Tyr2ImQq7pXFDpHmIiJDMxDQZQ9RfMRMitdg4VhFWVh22QRN7rT7GMqTdYL9PgRUnQhnlVhUhrgYFKQ+pel2L7VTZhEII0L/UfasosLi703zCTDQGV3NX3x+uOsPhqqMNFfScdFQdzqGhrl4mQrfLFVEF5T9tMhDxNoQL7TISoXkIVVKe+hb46MyjPBRMhnvyuCqidG6idEdTaDdTaCOrkBupkAuVL/AAT7eXBmByKjQnsSRFdyKEEDrgdyZcaOZTQA7chuRcvh3I0pfpJZQDliokobiv7Z+0OSuosS6EQ3uVUhZOhHJnOQVLzKYOShVCmymS+ugyqdcfUL38STwGG2gEhuS11sFWHoFKHk/xXOTSEAFRgNayC9AWsNkKonYNoQay9cAwFUF5VvIupD7hLwYQfQXnt431Ig+Lxe8hDJWDKyZ2u/BhyUM58FblyGVQ1DxMhFQw103MalENQ0XxMhEQAlEOnQK2TGCo6O7nb/SnNjf7qHAmhnIQu37nrI8YHOgihXCzB3Y9hTBGZt/BdUK+JghiFd0GdXgtIop6vYijrjuaVeonUk70VQtUb5Rf1mKgsRq2oBBCyqYVQq8wq05Ne/NVrRbYSQ1kdvyed7TmqP98CUL7yGePFZKCO6gvHPgBlcUF+0jFBgvgCuCCvEltTfU8z1Q/1FzYJCGVrSWaYUAlmNopnoeykWZiqKMJsEj4Jw0LBRWEdJu3nxJi0EZSNvPkXnbmPbqjvcHl1DsrHXUSiOz12Ea5WeOMy2HyIZWoVbvRrlKLcO0IaDoKHipTR8U3mG92Y5/TAMV34quQoQlYkgKp6l8DL0Zl+i3xskqTjQ+QRlHyZOv4MC1AFpP3sVYp2+Y88gx7U7+B7Qocwpq+uUdYZZYq1hi/+N4sFfQFb2hZg5/igUbuO1kSnX/eUp4/pyrCvk+Eald+1TMKZqWgGjE270LbA1/MX+UqNnvFk04F0wm9LPydPc7VSGE/FMvPgUqfrl8VmbIF2dpJrmNNckJ9cSbr+ee+39CP09B2gK2uptF0X7kd53yktxhZMccpkrgvmepybsWq3F+Y5TWqvkDh5CSpyOHPZ7x1jC6bVKWLYHcYG7jlYLJ/2nAhXapsWYmVAC4Y3OWn6gEIsjWC0EPdgGNSYoGBUywx3gmqPiYcIhO2aCY7zqAvKKOENJDi0UwkNa/IM81viVJD+RTP6RW7MmOxl8i7/fp5xcGYxvXiKrIwdYWI/45T1d3UzMh07AqWspyb3H08bKUAgub/IMsgyC0Yue1tUAhfkGQt+bDaB89FnelZcj9Ao7pthtl95R2jcAnBwU/YDFbfKFoBBjfUWdFhFhWmWGPS+tpIM21Yy6D0NODedBpzVe1qVGmhfwXxNXSe4gVHW/uao7/tH09rf+iG0WwBkNLlRcJEtlS6XQmlH899r03W0F2SQdD+IvN3Z2UzPpLf9g03yi9xOsMiNF4vcorLIzTzL3PaE6XOYIMW+0b+4lc7NpFJMqb+5PdNzYBT2itFTb/ndWW9OLxT7IDGbo6236qkPnkBsI6+NuzpoYU4HQG24p5OHl2KTdfn6iNlwf1zn5Z7dcN9Y2nC/GhIMeVk24fqgcTRBQR9NcFiHTVnmB9UU14ES6ijNhJxHLRB4mRx3EUli+/tMx130kw1MhDxnOxgErjmOWmreCQV48Xw/1LuhRLZ19mN5etPArUOI4yzcQ3E1+u0ijnpa5qFYvYLyewyL0nzoBtmBGg5aq+uFHbRmWR8orD5QWH2gsPoPQp1RYsQBoVAAAAAASUVORK5CYII="
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+          <div class="card-1">
+            <div class="card-img">
+              <div class="card-header-img">
+                <img class="card-image"
+                  src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="">
+                  <div class="card-time">7.30</div>
+              </div>
+            </div>
+            <div class="card-details">
+              <div class="card-channel-logo"><img
+                  src="https://yt3.googleusercontent.com/SKfaImVInHCgXGa65zMFI__V3L8x5nNDXIFgCBQXbJm_WuB0fAAONyUVVFeid-I9xlzh2tbm-A=s900-c-k-c0x00ffffff-no-rj"
+                  alt="" style="height: 50px; width: 50px;" ></div>
+              <div class="card-channel-content">
+                <div class="card-channel-heading">What If English was our Mother Tongue ? | Random Video | Blacksheep
+                </div>
+                <div class="card-channel-name">
+                  <div class="channel-name">Black Sheep </div>
+                  <div class="card-verified-symbol"><img
+                      src="data:image/png;base64,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"
+                      alt="" style="height: 20px; width: 20px;"></div>
+                </div>
+                <div class="card-video-details">
+                  <div class="card-video-views">64k views</div>
+                  <div class="card-video-days">.6 days ago</div>
+                </div>
+              </div>
+              <div class="card-channel-options"><img class="card-channel-options-img" src="https://cdn-icons-png.flaticon.com/128/2311/2311524.png"
+                  alt=""></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="main-content">
-        content part 
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

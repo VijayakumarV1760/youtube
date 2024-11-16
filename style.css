@@ -1,9 +1,11 @@
 body {
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     background-color: #0F0F0F;
     color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 .header {
@@ -40,6 +42,8 @@ body {
 .search {
     display: flex;
     gap: 4;
+    background-color: #373636;
+    border-radius: 20px;
 }
 
 .search-input {
@@ -55,7 +59,7 @@ body {
 }
 
 .search-icon {
-    background: #272727;
+    background: #373636;
     
     color: white;
     padding: 7px;
@@ -63,7 +67,7 @@ body {
 }
 
 .mic {
-    /* background: red; */
+    background: #373636;
     color: white;
     padding: 7px;
     border-radius: 50%;
@@ -80,7 +84,7 @@ body {
 }
 
 .upload-video {
-    /* background: red; */
+    background: #373636;
     color: white;
     padding: 7px;
     border-radius: 50%;
@@ -91,13 +95,14 @@ body {
 }
 
 .notification {
-    /* background: red; */
+    background: #373636;
     color: white;
     padding: 7px;
     border-radius: 50%;
 }
-
-
+.notification:hover {
+    background: #373636;
+}
 
 .profile {
     height: 30px;
@@ -125,11 +130,18 @@ body {
 }
 .sidebar{
     width: 15%;
-    min-height: 100vh;
-    /* background-color: blanchedalmond; */
+    height: auto;  
+    max-height: 600px;  
     color: white;
     padding: 0 8px;
-}
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    white-space: nowrap;
+ }
+
+.sidebar::-webkit-scrollbar {
+    display: none; 
+} 
 
 .list1 ul {
     padding: 0 8px;
@@ -139,14 +151,16 @@ ul li{
     list-style: none;
     padding-left: 18px;
     height: 40px;
+    position: relative;
+    align-items: center;
 }
 ul li:hover{
     list-style: none;    
     background-color: #272727;
 }
 
-.list1 ul li i{
-    margin-right: 18px;  
+.list1 ul li p:first-of-type{
+    margin-right: 22px;  
 }
 .sidebar-line{
     border-bottom: 0.3px solid rgb(255, 255, 255);
@@ -154,4 +168,117 @@ ul li:hover{
     width: 90%;
     margin: 0 8px;
     opacity: 30%;
+}
+.main-content{    
+    width: 85%;
+}
+
+.trendingKeys{
+    height: 8vh;    
+    display: flex; 
+    gap: 8px;     
+    position: relative;
+    align-content: center;      
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    white-space: nowrap;
+}
+
+.trendingKeys::-webkit-scrollbar {
+    display: none; 
+}
+.trendingKeys a{
+    background-color: #373636;  
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    border-radius: 14px;
+    position: relative;
+    left: 12px;
+    right: 12px;
+}
+.trendingKeys .all{
+        color: rgb(0, 0, 0);
+     
+    background-color: #F2F2F2;   
+}
+.TrendingContent{
+    width: 100%;
+    height: 100%;    
+}
+.TrendingContent-section{    
+    margin: 6px 12px;
+    max-height: 550px;
+    width: 100%;
+    overflow-y: scroll;
+    margin-bottom: 24px;
+}
+
+.card{    
+    display: flex;
+    padding: 23px;
+}
+
+.card-1{
+    width: 33.3%;
+    height: 30vh;
+    margin: 18px;
+    padding: 12px;
+}
+.card-img{
+    width: 100%;
+}
+.card-header-img{
+    height: 200px;
+    width: 350px;
+    position: relative;
+
+}
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+.card-time{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #ffffff;
+    background-color: #051D28;
+    padding: 1px;
+    border-radius: 6px;
+}
+.card-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+}
+.card-channel-logo img{
+    margin-top: 8px;
+    top: 2px;
+    border-radius: 50%;
+}
+.card-channel-content{
+    height: 40px;
+    width: 248px;
+}
+.card-channel-heading{
+    height: 50px;
+    width: 258px;
+}
+
+.card-channel-options-img{
+    width: 20px;
+    height: 20px;
+}
+.card-channel-name{
+   color: #919191;
+    display: flex;
+    opacity: 70%;
+}
+.card-video-details{
+    color: #919191;
+    display: flex;
 }
