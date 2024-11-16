@@ -2,11 +2,13 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
+    background-color: #0F0F0F;
+    color: white;
 }
 
 .header {
     display: flex;
-    background-color: beige;
+    /* background-color: beige; */
     height: 10vh;
     align-items: center;
 }
@@ -53,13 +55,16 @@ body {
 }
 
 .search-icon {
-    background: red;
+    background: #272727;
+    
+    color: white;
     padding: 7px;
     border-radius: 0px 20px 20px 0px;
 }
 
 .mic {
-    background: red;
+    /* background: red; */
+    color: white;
     padding: 7px;
     border-radius: 50%;
 }
@@ -75,16 +80,24 @@ body {
 }
 
 .upload-video {
-    background: red;
+    /* background: red; */
+    color: white;
     padding: 7px;
     border-radius: 50%;
 }
 
+.upload-video:hover {
+    background: #272727;
+}
+
 .notification {
-    background: red;
+    /* background: red; */
+    color: white;
     padding: 7px;
     border-radius: 50%;
 }
+
+
 
 .profile {
     height: 30px;
@@ -113,7 +126,8 @@ body {
 .sidebar{
     width: 15%;
     min-height: 100vh;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
+    color: white;
     padding: 0 8px;
 }
 
@@ -128,12 +142,16 @@ ul li{
 }
 ul li:hover{
     list-style: none;    
-    background-color: rgb(250, 240, 225);
+    background-color: #272727;
 }
 
 .list1 ul li i{
     margin-right: 18px;  
 }
 .sidebar-line{
-    border-bottom: 0.3px solid black;
+    border-bottom: 0.3px solid rgb(255, 255, 255);
+    border-radius: 30px;    
+    width: 90%;
+    margin: 0 8px;
+    opacity: 30%;
 }
