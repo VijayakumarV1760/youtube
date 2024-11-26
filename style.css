@@ -282,3 +282,7 @@ ul li:hover{
     color: #919191;
     display: flex;
 }
+
+.card-verified-symbol-img{
+    border-radius: 58px;
+}
